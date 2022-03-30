@@ -25,3 +25,29 @@ class SearchConstraint:
             return "{0} is present but not at index {1}".format(self.letter, self.index)
         elif self.placement == Placement.ABSENT:
             return "{0} is absent".format(self.letter)
+
+    @classmethod
+    def from_dict(cls, dicitonary: dict) -> 'SearchConstraint':
+        """
+        Create a SearchConstrain from a dictionary
+        :param dicitonary: A dict holding all the values for SearchConstraint
+        :return: A SearchConstraint object
+        """
+
+        search_constraint = cls(
+            dicitonary.get("letter", ""),
+            dicitonary.get("index", 0),
+            Placement(dicitonary.get('placement', Placement.ABSENT))
+        )
+
+        return search_constraint
+
+    @classmethod
+    def from_dicts(cls, dicts: [dict]) -> ['SearchConstraint']:
+        """
+        Create a list of SearchConstraint from a list of dict
+        :param dicts: A list holding dicts which are holding all the values for a SearchConstraint
+        :return: A list of SearchConstraint objects
+        """
+
+        return [cls.from_dict(_) for _ in dicts]
