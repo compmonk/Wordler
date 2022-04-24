@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "c6a9cd39-ffe7-4331-abf7-104b89c2cf84",
+		"name": "Wordle",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get words",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"letter\": \"o\",\n        \"index\": 0,\n        \"placement\": \"present\"\n    },\n    {\n        \"letter\": \"t\",\n        \"index\": 1,\n        \"placement\": \"placed\"\n    },\n    {\n        \"letter\": \"h\",\n        \"index\": 2,\n        \"placement\": \"absent\"\n    },\n    {\n        \"letter\": \"e\",\n        \"index\": 3,\n        \"placement\": \"present\"\n    },\n    {\n        \"letter\": \"r\",\n        \"index\": 4,\n        \"placement\": \"absent\"\n    },\n    {\n        \"letter\": \"s\",\n        \"index\": 0,\n        \"placement\": \"placed\"\n    },\n    {\n        \"letter\": \"n\",\n        \"index\": 1,\n        \"placement\": \"absent\"\n    },\n    {\n        \"letter\": \"a\",\n        \"index\": 2,\n        \"placement\": \"absent\"\n    },\n    {\n        \"letter\": \"i\",\n        \"index\": 3,\n        \"placement\": \"absent\"\n    },\n    {\n        \"letter\": \"l\",\n        \"index\": 4,\n        \"placement\": \"absent\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/wordle",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"wordle"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get words",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"letter\": \"o\",\n        \"index\": 0,\n        \"placement\": \"present\"\n    },\n    {\n        \"letter\": \"t\",\n        \"index\": 1,\n        \"placement\": \"absent\"\n    },\n    {\n        \"letter\": \"h\",\n        \"index\": 2,\n        \"placement\": \"absent\"\n    },\n    {\n        \"letter\": \"e\",\n        \"index\": 3,\n        \"placement\": \"absent\"\n    },\n    {\n        \"letter\": \"r\",\n        \"index\": 4,\n        \"placement\": \"absent\"\n    },\n    {\n        \"letter\": \"s\",\n        \"index\": 0,\n        \"placement\": \"absent\"\n    },\n    {\n        \"letter\": \"n\",\n        \"index\": 1,\n        \"placement\": \"absent\"\n    },\n    {\n        \"letter\": \"a\",\n        \"index\": 2,\n        \"placement\": \"absent\"\n    },\n    {\n        \"letter\": \"i\",\n        \"index\": 3,\n        \"placement\": \"absent\"\n    },\n    {\n        \"letter\": \"l\",\n        \"index\": 4,\n        \"placement\": \"present\"\n    },\n    {\n        \"letter\": \"c\",\n        \"index\": 0,\n        \"placement\": \"absent\"\n    },\n    {\n        \"letter\": \"l\",\n        \"index\": 1,\n        \"placement\": \"present\"\n    },\n    {\n        \"letter\": \"o\",\n        \"index\": 2,\n        \"placement\": \"present\"\n    },\n    {\n        \"letter\": \"c\",\n        \"index\": 3,\n        \"placement\": \"absent\"\n    },\n    {\n        \"letter\": \"k\",\n        \"index\": 4,\n        \"placement\": \"absent\"\n    },\n    {\n        \"letter\": \"w\",\n        \"index\": 0,\n        \"placement\": \"present\"\n    },\n    {\n        \"letter\": \"o\",\n        \"index\": 1,\n        \"placement\": \"placed\"\n    },\n    {\n        \"letter\": \"u\",\n        \"index\": 2,\n        \"placement\": \"absent\"\n    },\n    {\n        \"letter\": \"l\",\n        \"index\": 3,\n        \"placement\": \"placed\"\n    },\n    {\n        \"letter\": \"d\",\n        \"index\": 4,\n        \"placement\": \"absent\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/wordle",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"wordle"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.0 Python/3.8.10"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 24 Apr 2022 08:20:42 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    \"jowly\",\n    \"lowly\"\n]"
+				}
+			]
+		}
+	]
+}

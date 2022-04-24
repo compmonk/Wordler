@@ -87,4 +87,4 @@ class WordleTrie(dict):
         possible_words = reduce(lambda x, y: set(x).intersection(set(y)), possible_words, set(possible_words[0]))
         impossible_words = reduce(lambda x, y: set(x).union(set(y)), impossible_words, set())
         # print(possible_words, impossible_words)
-        return possible_words.difference(impossible_words)
+        return list(possible_words.difference(impossible_words))
